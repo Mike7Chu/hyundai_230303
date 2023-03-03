@@ -33,8 +33,34 @@ int main(void)
 }
 #endif
 
+#if 0
 int main()
 {
     printf("Hello, C++\n");
     // C++은 컴파일러가 return 0을 생략하면, 자동으로 추가해줍니다.
+}
+#endif
+
+// UNIX
+//  : 모든 것은 파일입니다.
+//   write("hello") ----> 화면 -> 화면 출력
+//                       비디오 -> 비디오 드라이버 출력
+//                        소켓 -> 네트워크
+
+// 프로세스
+// - 키보드(표준 입력 장치) => stdin   - 라인 버퍼링
+// - 모니터(표준 출력 장치) => stdout  - 라인 버퍼링
+// - 모니터(표준 에러 장치) => stderr  - 버퍼링 X
+
+// C++ 표준 입출력 라이브러리가 있습니다.
+#include <iostream>
+// Input Output Stream
+//  표준 입력: cin
+//  표준 출력: cout
+//  표준 에러: cerr
+
+int main()
+{
+    std::cout << "Hello, C++"
+              << std::endl;
 }

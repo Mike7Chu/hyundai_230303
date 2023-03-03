@@ -21,6 +21,7 @@ int main()
 //   => 매크로의 인자 영역과 치환 영역을 괄호를 통해
 //      해결할 수 있습니다.
 
+#if 0
 int main()
 {
     int a = 10;
@@ -30,4 +31,11 @@ int main()
 
     cout << DBL(a) * DBL(a) << endl;
     // (a) + (a) * (a) + (a)
+}
+#endif
+
+int main()
+{
+    int a = 10;
+    cout << SQUARE(++a) << endl;
 }

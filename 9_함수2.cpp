@@ -7,6 +7,17 @@ using namespace std;
 // 여러 개 제공할 수 있습니다.
 //  => 함수 오버로딩(overloading, 중복 적재)
 
+// 원리
+// => C++ 컴파일러는 함수의 이름을 결정할 때,
+//    인자 정보를 사용합니다.
+//   "Name Mangling(짓이기다)"
+
+// C: foo(int a)    => _foo
+//    foo(double d) => _foo
+
+// C++: foo(int a)    => __Z3fooi
+//      foo(double d) => __Z3food
+
 int square(int x) { return x * x; }
 double square(double x) { return x * x; }
 

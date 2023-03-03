@@ -34,6 +34,7 @@ int main()
 }
 #endif
 
+#if 0
 int main()
 {
     int* p = NULL;
@@ -48,4 +49,20 @@ int main()
     // > 매크로 함수를 통해서는 해결할 수 없습니다.
     //   매크로 함수를 사용할 때, 다중 부수효과로 인한 미정의 동작
     //   여부를 항상 주의해야 합니다.
+}
+#endif
+
+// 2. C++은 함수 호출의 오버헤드를 제거하는
+//    문법이 제공됩니다.
+// 매크로 함수 => 전처리기 의한 텍스트 치환
+// 인라인 함수 => 컴파일러에 의한 기계어 치환
+
+inline int square(int x) { return x * x; }
+
+int main()
+{
+    int a = 10;
+    int result = square(++a);
+
+    cout << result << endl;
 }

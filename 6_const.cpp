@@ -19,7 +19,7 @@ using namespace std;
 
 int main()
 {
-    constexpr int c = 10;
+    constexpr int c = 10; // const int
     printf("%d\n", c);
 
     int n = 10;

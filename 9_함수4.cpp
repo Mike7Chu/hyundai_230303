@@ -36,8 +36,14 @@ int main()
 
 int main()
 {
+    int* p = NULL;
+    // *p = 42; /* 미정의 동작 */
+
     int a = 10;
-    cout << SQUARE(++a) << endl;
+    // cout << SQUARE(++a) << endl;
+    ++a;
+    cout << SQUARE(a) << endl;
+
     // ((++a) * (++a)): 미정의 동작
     // > 매크로 함수를 통해서는 해결할 수 없습니다.
     //   매크로 함수를 사용할 때, 다중 부수효과로 인한 미정의 동작

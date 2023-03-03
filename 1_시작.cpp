@@ -59,8 +59,28 @@ int main()
 //  표준 출력: cout
 //  표준 에러: cerr
 
+#if 0
 int main()
 {
     std::cout << "Hello, C++"
               << std::endl;
+}
+#endif
+
+// 1) std::cout, std::cin, std::endl 정체는 무엇인가?
+
+// 2) 서식을 지정하지 않아도, 타입에 따라 원하는 형태로 입출력 됩니다.
+//    원리는 무엇인가?
+
+// 3) 주소를 보내지 않아도, 변수의 값이 변경됩니다.
+//    원리는 무엇인가?
+
+int main()
+{
+    double n;
+    // scanf("%lf", &n);
+    // printf("n: %lf\n", n);
+
+    std::cin >> n;
+    std::cout << "n: " << n << std::endl;
 }

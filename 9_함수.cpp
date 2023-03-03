@@ -6,10 +6,10 @@ using namespace std;
 //  정의: 함수의 파라미터의 기본값을 지정할 수 있습니다.
 //  => 함수를 호출할 때, 전달된 인자가 없는 경우
 //     기본값을 컴파일러가 자동으로 처리합니다.
-int add(int a, int b, int c = 0, int d = 0)
-{
-    return a + b + c + d;
-}
+//  1) 뒤에서부터 지정해야 합니다.
+//  2) 선언부에만 작성되어야 합니다.
+
+int add(int a, int b, int c = 0, int d = 0);
 
 int main()
 {
@@ -20,4 +20,9 @@ int main()
     // cout << add(10, 20, 30, 40) << endl;
     // cout << add(10, 20, 30, 0) << endl;
     // cout << add(10, 20, 0, 0) << endl;
+}
+
+int add(int a, int b, int c /* =0 */, int d /* =0 */)
+{
+    return a + b + c + d;
 }

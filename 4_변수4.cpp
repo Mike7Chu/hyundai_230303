@@ -7,6 +7,7 @@ using namespace std;
 // (예외)
 // 1. sizeof
 // 2. &
+// 3. decltype
 #if 0
 int main()
 {

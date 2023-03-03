@@ -15,12 +15,15 @@ using namespace std;
 //    > 상수의 값이 실행시간에 결정됩니다.
 //      상수에 대한 접근은 메모리로부터 이루어집니다.
 
+// C++11 constexpr - 컴파일 타임 상수
+
 int main()
 {
-    const int c = 10;
+    constexpr int c = 10;
     printf("%d\n", c);
 
     int n = 10;
     cin >> n;
+    // constexpr int c2 = n; => 오류! 런타임 상수 입니다.
     const int c2 = n;
 }

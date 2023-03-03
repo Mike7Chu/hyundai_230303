@@ -11,7 +11,7 @@ using namespace std;
 // 3. 인라인 함수는 코드 메모리 사용량의 원인이 될 수 있습니다.
 //   > 간결한 함수에 대한 인라인 치환이 좋습니다.
 
-int add(int a, int b) { return a + b; }
+inline int add(int a, int b) { return a + b; }
 
 int main()
 {

@@ -25,8 +25,21 @@ int main()
 #endif
 
 // 2. using 선언(Declaration)
+#if 0
 using std::cout;
 using std::endl;
+
+int main()
+{
+    cout << "Hello, C++" << endl;
+}
+#endif
+
+// 3. using 지시어(Directive)
+using namespace std;
+// : 이름 공간의 모든 심볼을 암묵적으로 접근할 수 있습니다.
+// > 현업에서 절대 사용하면 안됩니다.
+//   "이름 충돌 문제가 발생합니다."
 
 int main()
 {

@@ -56,8 +56,10 @@ int main()
 //    문법이 제공됩니다.
 // 매크로 함수 => 전처리기 의한 텍스트 치환
 // 인라인 함수 => 컴파일러에 의한 기계어 치환
-
 inline int square(int x) { return x * x; }
+
+// C에서도 inline 함수 문법이 도입되었습니다.
+// - static inline int square(int x) { return x * x; }
 
 int main()
 {

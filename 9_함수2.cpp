@@ -12,11 +12,19 @@ using namespace std;
 //    인자 정보를 사용합니다.
 //   "Name Mangling(짓이기다)"
 
+// extern "C"
+//  정의: C++의 키워드로써, 함수를 C언어의 형태로
+//      만드는 키워드입니다.
+//  활용
+//  - C++에서 C의 함수를 호출하거나,
+//    C에서 호출 가능한 함수를 정의할 수 있습니다.
+
+// C++:  foo(int a)    => __Z3fooi
+//       foo(double d) => __Z3food
+// extern "C" foo(int) => _foo
+
 // C: foo(int a)    => _foo
 //    foo(double d) => _foo
-
-// C++: foo(int a)    => __Z3fooi
-//      foo(double d) => __Z3food
 
 int square(int x) { return x * x; }
 double square(double x) { return x * x; }

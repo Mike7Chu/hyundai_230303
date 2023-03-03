@@ -46,6 +46,7 @@ int main()
 {
     const int c = 10; // const int
 
-    auto x = c; // x -> int
-    x = 100;
+    // auto x = c; // x -> int
+    const auto x = c;
+    // x = 100; /* compile error */
 }

@@ -16,4 +16,10 @@ int main()
 
     y[0] = 10;
     y[1] = 20;
+
+    const int c = 10; // const int
+    auto n2 = c; // auto -> int
+
+    decltype(c) c2 = 100;
+    // c2 = 1000;
 }

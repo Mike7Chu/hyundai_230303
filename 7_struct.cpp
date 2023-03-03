@@ -16,7 +16,7 @@ struct Rect {
 
 int main()
 {
-    Rect r;
+    Rect r = {};
     Point pt = { 10, 20 };
 
     auto [lt, rb] = r;

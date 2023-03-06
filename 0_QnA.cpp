@@ -28,6 +28,7 @@ using namespace std;
 // > 표현 범위에 따른 정수 타입을 사용할 때, 아래의 헤더를 통해
 //   사용하는 것이 안전합니다.
 // #include <stdint.h>
+#if 0
 #include <cstdint>
 
 int main()
@@ -36,4 +37,40 @@ int main()
     uint32_t b;
 
     printf("%zu\n", sizeof(long)); // ???
+}
+#endif
+
+// 함수 포인터
+// > 함수를 가르키는 포인터입니다.
+
+int add(int a, int b) { return a + b; }
+// int(int, int)
+// int(*)(int, int)
+
+int sub(int a, int b) { return a - b; }
+// int(int, int)
+// int(*)(int, int)
+
+// - 함수의 타입은 함수의 인자 정보와 반환 타입에 의해서 결정됩니다.
+//   => 함수의 타입은 함수의 시그니처에 의해서 결정됩니다.
+// - 함수의 시그니처가 동일하면, 같은 함수입니다.
+//   함수의 시그니처가 동일하면, 같은 함수 포인터를 통해 참조할 수 있습니다.
+
+int main()
+{
+    int n; // int
+    int* p = &n;
+    *p = 10;
+    cout << *p << endl;
+
+    int (*p2)(int, int); // 함수 포인터 타입 변수
+    printf("%p\n", &add);
+
+    p2 = &add;
+    printf("%p\n", p2);
+
+    p2 = &sub;
+
+    int result = (*p2)(10, 20);
+    cout << result << endl;
 }

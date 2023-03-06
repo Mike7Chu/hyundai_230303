@@ -32,7 +32,8 @@ auto foo()
 // 3. decltype을 통해 반환 타입을 결정할 수 있습니다.
 
 // decltype(a+b) add(int a, int b) { return a + b; }
-auto add(int a, int b) -> decltype(a + b) { return a + b; }
+// auto add(int a, int b) -> decltype(a + b) { return a + b; }
+auto add(int a, int b) -> int { return a + b; }
 
 int main()
 {

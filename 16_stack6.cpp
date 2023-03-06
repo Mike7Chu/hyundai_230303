@@ -32,7 +32,7 @@ public:
 
 int main()
 {
-    Stack s2; // Stack()
+    Stack s2; // Stack() -> Stack(10)
     Stack s1(100); // Stack(int)
 
     s1.push(10);

@@ -3,7 +3,13 @@
 using namespace std;
 
 void inc1(int x) { ++x; }
-void inc2(int* x) { ++(*x); }
+void inc2(int* x)
+{
+    // NULL 체크가 필요합니다.
+    if (x) {
+        ++(*x);
+    }
+}
 void inc3(int& x) { ++x; }
 
 int main()

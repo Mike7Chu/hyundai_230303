@@ -19,12 +19,20 @@ PARR3 foo()
 // C++11, 함수를 만드는 새로운 방법이 도입되었습니다.
 //  "Trailing Return Type"
 
-auto add(int a, int b) -> int { return a + b; }
-auto foo() -> int (*)[3]
+// auto add(int a, int b) -> int { return a + b; }
+// auto foo() -> int (*)[3]
+auto foo()
 {
     static int x[3];
     return &x; // int(*)[3]
 }
+
+// 1. 직관적이다.
+// 2. 반환 타입을 추론합니다.
+// 3. decltype을 통해 반환 타입을 결정할 수 있습니다.
+
+// decltype(a+b) add(int a, int b) { return a + b; }
+auto add(int a, int b) -> decltype(a + b) { return a + b; }
 
 int main()
 {

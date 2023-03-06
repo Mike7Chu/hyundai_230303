@@ -6,7 +6,7 @@ public class Sample {
 }
 
 // Kotlin
-fun main() {
+fun main(): Int {
   println("Hello, Kotlin")
 }
 */

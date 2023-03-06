@@ -35,6 +35,13 @@ auto foo()
 // auto add(int a, int b) -> decltype(a + b) { return a + b; }
 auto add(int a, int b) -> int { return a + b; }
 
+// int (*goo())(int, int)
+// auto goo() -> int (*)(int, int)
+auto goo()
+{
+    return &add; // int(*)(int, int)
+}
+
 int main()
 {
     cout << add(10, 20) << endl;

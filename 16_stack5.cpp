@@ -15,7 +15,7 @@ using namespace std;
 class Stack {
 private:
     // 멤버 데이터 변수
-    char buff[10];
+    int buff[10];
     int top;
 
 public:

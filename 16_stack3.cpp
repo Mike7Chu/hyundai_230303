@@ -10,7 +10,7 @@ using namespace std;
 
 struct Stack {
     // 멤버 데이터 변수
-    char buff[10];
+    int buff[10];
     int top;
 
     // 멤버 함수 - 멤버 데이터를 읽거나 변경하는 역활

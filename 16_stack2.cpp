@@ -5,7 +5,7 @@ using namespace std;
 // 2. 스택 타입을 설계합니다.
 //  => 데이터 캡슐화
 struct Stack {
-    char buff[10];
+    int buff[10];
     int top;
 };
 

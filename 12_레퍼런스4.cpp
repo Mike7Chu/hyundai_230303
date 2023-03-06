@@ -26,6 +26,8 @@ void foo(int&& r)
 {
     cout << "rvalue" << endl;
 }
+// 핵심: lvalue와 rvalue를 구분해서 처리할 수 있습니다.
+//    rvalue에서 불필요한 메모리 복사를 제거하는 형태로 최적화할 수 있습니다.
 
 int main()
 {

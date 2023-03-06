@@ -9,7 +9,10 @@ using namespace std;
 //    1) private: 외부에서 접근이 불가능합니다.
 //    2) public: 외부에서 접근이 가능합니다.
 
-struct Stack {
+// "class" 키워드는 "struct"와 동일하지만, 기본 접근지정자가 private 입니다.
+// - class는 객체를 위한 타입입니다.
+
+class Stack {
 private:
     // 멤버 데이터 변수
     char buff[10];

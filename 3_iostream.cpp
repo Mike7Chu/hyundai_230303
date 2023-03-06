@@ -6,8 +6,8 @@ using namespace std;
 // C: 표준 출력 - printf
 //    표준 입력 - scanf
 
-// C++: 표준 출력 - cout
-//      표준 입력 - cin
+// C++: 표준 출력 객체 - cout
+//      표준 입력 객체 - cin
 #if 0
 int main()
 {

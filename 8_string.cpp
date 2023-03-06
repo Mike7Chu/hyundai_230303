@@ -44,6 +44,8 @@ int main()
     std::string s5 = { "hello" };
     std::string s6 { "hello" };
 
+    cout << s1.length() << endl;
+
     if (s1 == s2) {
         cout << "같은 문자열" << endl;
     }

@@ -26,7 +26,7 @@ int main()
 //  => 메모리를 재해석하는 용도로 사용합니다.
 //     : 위험성
 //  => static_cast가 실패하는 연산을 대상으로 많이 사용합니다.
-
+#if 0
 int main()
 {
     int n = 0x12345678;
@@ -35,4 +35,22 @@ int main()
 
     // double* pd = reinterpret_cast<double*>(&n);
     // *pd = 3.14; /* 미정의 동작 */
+}
+#endif
+
+// 3. const_cast
+//  => 메모리의 상수성(const)를 제거하는 목적으로 사용합니다.
+//   : 타입의 불일치 문제를 해결하기 위해 사용합니다.
+
+void foo(char* s)
+{
+    printf("%s\n", s);
+}
+
+int main()
+{
+    const char* s = "hello";
+    // foo(static_cast<char*>(s)); // const char* -> char*
+    // foo(reinterpret_cast<char*>(s));
+    foo(const_cast<char*>(s));
 }

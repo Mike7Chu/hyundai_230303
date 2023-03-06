@@ -54,3 +54,6 @@ int main()
     // foo(reinterpret_cast<char*>(s));
     foo(const_cast<char*>(s));
 }
+
+// 4. dynamic_cast
+//  => Coming Soon

@@ -1,18 +1,21 @@
-// 16_stack3.cpp
+// 16_stack4.cpp
 #include <iostream>
 using namespace std;
 
-// 3. 멤버 함수(상태를 조작하는 함수)와 멤버 데이터(상태)를 하나의
-//   타입으로 묶을 수 있습니다.
-//    - 캡슐화(상태 + 행위)
-
-// => 상태와 행위를 가지고 있는 변수: 객체(object)
+// 멤버 데이터(객체의 상태)는 멤버 함수를 통해서 조작되어야 합니다.
+// 외부에서 함부로 변경되면 안됩니다.
+//  => 정보 은닉(Information Hiding)
+//   : 접근 지정자
+//    1) private: 외부에서 접근이 불가능합니다.
+//    2) public: 외부에서 접근이 가능합니다.
 
 struct Stack {
+private:
     // 멤버 데이터 변수
     char buff[10];
     int top;
 
+public:
     // 멤버 함수 - 멤버 데이터를 읽거나 변경하는 역활
     void init()
     {
@@ -38,7 +41,8 @@ int main()
     cout << s2.pop() << endl;
 
     Stack s1;
-    // s1.top = 100; // !!!
+    // s1.top = 100;
+
     s1.init();
 
     s1.push(10);

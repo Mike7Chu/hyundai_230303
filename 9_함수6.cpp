@@ -19,7 +19,6 @@ using namespace std;
 //      코드 메모리 사용량이 증가할 수 있습니다.
 //       - inline 최적화
 //       - 명시적으로 타입을 지정할 수 있습니다.
-
 template <typename TYPE>
 TYPE square(TYPE x) { return x * x; }
 

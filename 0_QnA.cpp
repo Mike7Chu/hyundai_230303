@@ -40,16 +40,17 @@ int main()
 }
 #endif
 
+#if 0
 // 함수 포인터
 // > 함수를 가르키는 포인터입니다.
 
 int add(int a, int b) { return a + b; }
-// int(int, int)
-// int(*)(int, int)
+//  add: int(int, int)
+// &add: int(*)(int, int)
 
 int sub(int a, int b) { return a - b; }
-// int(int, int)
-// int(*)(int, int)
+//  sub: int(int, int)
+// &sub: int(*)(int, int)
 
 // - 함수의 타입은 함수의 인자 정보와 반환 타입에 의해서 결정됩니다.
 //   => 함수의 타입은 함수의 시그니처에 의해서 결정됩니다.
@@ -73,4 +74,25 @@ int main()
 
     int result = (*p2)(10, 20);
     cout << result << endl;
+}
+#endif
+
+int add(int a, int b)
+{
+    return a + b;
+}
+
+int main()
+{
+    int (*fp)(int, int);
+    // fp ------> int(int, int)
+
+    fp = &add;
+    int r = (*fp)(10, 20);
+
+    fp = add; // &add
+    int r2 = fp(10, 20); //  (*fp)(10, 20);
+
+    cout << r << endl;
+    cout << r2 << endl;
 }

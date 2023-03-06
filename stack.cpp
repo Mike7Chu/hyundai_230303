@@ -11,6 +11,7 @@ Stack::~Stack()
     delete[] buff;
 }
 
+/*
 void Stack::push(int n)
 {
     buff[top++] = n;
@@ -20,3 +21,4 @@ int Stack::pop()
 {
     return buff[--top];
 }
+*/

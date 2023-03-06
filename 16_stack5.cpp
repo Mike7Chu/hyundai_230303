@@ -22,13 +22,14 @@ public:
     Stack()
     {
         cout << "Stack()" << endl;
+        top = 0;
     }
 
     // 멤버 함수 - 멤버 데이터를 읽거나 변경하는 역활
-    void init()
-    {
-        top = 0;
-    }
+    // void init()
+    // {
+    //     top = 0;
+    // }
 
     void push(int n)
     {
@@ -44,12 +45,12 @@ public:
 Stack s2;
 int main()
 {
-    s2.init();
+    // s2.init();
     s2.push(10);
     cout << s2.pop() << endl;
 
     Stack s1;
-    s1.init();
+    // s1.init();
 
     s1.push(10);
     s1.push(20);

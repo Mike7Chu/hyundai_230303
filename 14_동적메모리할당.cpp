@@ -32,6 +32,7 @@ int main()
     delete p2;
 }
 #endif
+#if 0
 int main()
 {
     int* p1 = static_cast<int*>(malloc(sizeof(int[10])));
@@ -39,4 +40,22 @@ int main()
 
     int* p2 = new int[10]; // 연속된 메모리를 할당하는 방법
     delete[] p2;
+}
+#endif
+
+int main()
+{
+    // int* p = static_cast<int*>(malloc(sizeof(int))); // 쓰레기값
+    // cout << *p << endl; /* 쓰레기 값 */
+
+    int* p = new int; // 쓰레기값
+    delete p;
+
+    p = new int(10);
+    cout << *p << endl;
+    delete p;
+
+    p = new int[3] { 10, 20, 30 };
+    cout << p[0] << ", " << p[1] << ", " << p[2] << endl;
+    delete[] p;
 }

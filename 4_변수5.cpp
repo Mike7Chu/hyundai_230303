@@ -14,12 +14,13 @@ int main()
     int x[3]; // int[3]
     decltype(x) y; // int[3];
 
+    // auto p = x;
     y[0] = 10;
     y[1] = 20;
 
     const int c = 10; // const int
     auto n2 = c; // auto -> int
 
-    decltype(c) c2 = 100;
+    decltype(c) c2 = 100; // const int
     // c2 = 1000;
 }

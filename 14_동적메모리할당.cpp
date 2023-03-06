@@ -48,14 +48,15 @@ int main()
     // int* p = static_cast<int*>(malloc(sizeof(int))); // 쓰레기값
     // cout << *p << endl; /* 쓰레기 값 */
 
-    int* p = new int; // 쓰레기값
-    delete p;
+    int* p1 = new int; // 쓰레기값
+    delete p1;
 
-    p = new int(10);
-    cout << *p << endl;
-    delete p;
+    // p = new int(10);
+    p1 = new int { 42 };
+    cout << *p1 << endl;
+    delete p1;
 
-    p = new int[3] { 10, 20, 30 };
-    cout << p[0] << ", " << p[1] << ", " << p[2] << endl;
-    delete[] p;
+    int* p2 = new int[3] { 10, 20, 30 };
+    cout << p2[0] << ", " << p2[1] << ", " << p2[2] << endl;
+    delete[] p2;
 }

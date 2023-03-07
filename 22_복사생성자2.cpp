@@ -26,8 +26,10 @@ int main()
 #endif
 
 // 2. 함수가 객체를 값으로 반환할 때
+//  > 유효한 메모리에 대해서 참조를 반환하면 됩니다.
 
 Sample s;
+// Sample foo()
 Sample& foo()
 {
     return s;

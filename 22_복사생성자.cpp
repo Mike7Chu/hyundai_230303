@@ -7,7 +7,7 @@ using namespace std;
 
 // 2. 사용자가 복사 생성자를 제공하지 않으면,
 //    컴파일러는 자동으로 멤버를 복사하는 복사 생성자를 제공합니다.
-
+#if 0
 class Point {
     int x;
     int y;
@@ -40,4 +40,29 @@ int main()
 
     Point pt2 = pt1;
     pt2.Print();
+}
+#endif
+
+#if 0
+class Point { };
+// 1. 컴파일러가 만들어주는 아무일도 하지 않는 기본 생성자
+// 2. 컴파일러가 만들어주는 멤버 복사 하는 복사 생성자
+
+int main()
+{
+    Point pt;
+    Point pt2 = pt;
+}
+#endif
+
+class Point {
+public:
+    Point(const Point& rhs) { }
+};
+// 사용자가 복사 생성자만 제공하면, 컴파일러는 기본 생성자를 제공하지 않습니다.
+// 복사 생성자도 생성자이기 때문입니다.
+
+int main()
+{
+    // Point pt;
 }

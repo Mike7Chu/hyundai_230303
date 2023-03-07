@@ -17,6 +17,7 @@ public:
     }
 };
 
+#if 0
 class Rect {
     Point leftTop;
 
@@ -40,6 +41,22 @@ int main()
     Point& p2 = r2.GetLeftTop();
     p2.Move(10, 20); // !!!!
     p2.Print();
+}
+#endif
+
+class Rect {
+    Point leftTop;
+
+public:
+    Rect() { }
+
+    // 값으로 반환할 때는 비상수 멤버 버전을 동시에 제공할 필요가
+    // 없습니다.
+    Point GetLeftTop() const { return leftTop; }
+};
+
+int main()
+{
 }
 
 #if 0

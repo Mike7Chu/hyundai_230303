@@ -10,10 +10,17 @@ public:
     Sample(const Sample&) { cout << "Sample(const Sample&)" << endl; }
 };
 
+// 1. 지역 객체를 참조로 반환하면 안됩니다.
+// 2. 지역 객체를 값으로 반환하면, 복사 생성의 비용이 발생합니다.
+// 3. RVO(Return Value Optimization)
+//   - 임시 객체로 반환하면, 복사 생성 비용을 최적화할 수 있습니다.
+
 Sample foo()
 {
-    Sample s;
-    return s;
+    // Sample s;
+    // return s;
+
+    return Sample();
 }
 
 int main()

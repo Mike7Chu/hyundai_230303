@@ -15,6 +15,9 @@ using namespace std;
 
 //  4. 초기화리스트는 생성자에서만 사용 가능합니다.
 
+//  5. 멤버 데이터의 타입이 const / reference 인 경우
+//     반드시 초기화리스트를 통해 초기화해주어야 합니다.
+
 class Sample {
     const int x;
     int& y;

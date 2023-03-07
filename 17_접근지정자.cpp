@@ -27,6 +27,15 @@ public:
     // int GetAge() { return age; }
 
     friend void PrintUser(User user);
+    friend class UserPrinter;
+};
+
+class UserPrinter {
+public:
+    void PrintUser(User user)
+    {
+        cout << user.name << ", " << user.age << endl;
+    }
 };
 
 void PrintUser(User user)
@@ -39,4 +48,7 @@ int main()
 {
     User user("Tom", 42);
     PrintUser(user);
+
+    UserPrinter printer;
+    printer.PrintUser(user);
 }

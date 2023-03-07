@@ -2,23 +2,36 @@
 #include <iostream>
 using namespace std;
 
+template <typename T>
 class Stack {
 private:
     // 멤버 데이터(상태)
-    int buff[10];
+    // int buff[10];
+    T* buff;
     int top;
 
 public:
+    Stack(int sz = 10)
+    {
+        buff = new T[sz];
+        top = 0;
+    }
+
+    ~Stack()
+    {
+        delete[] buff;
+    }
+
     // 멤버 함수(행위) / 메소드
-    void init() { top = 0; }
-    void push(int n) { buff[top++] = n; }
-    int pop() { return buff[--top]; }
+    // void init() { top = 0; }
+    void push(T n) { buff[top++] = n; }
+    T pop() { return buff[--top]; }
 };
 
 int main()
 {
-    Stack s1;
-    s1.init();
+    Stack<int> s1(100);
+    // s1.init();
 
     s1.push(10);
     s1.push(20);

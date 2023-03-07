@@ -31,6 +31,14 @@ int main()
     Point* p1 = static_cast<Point*>(malloc(sizeof(Point)));
     free(p1);
 
-    Point* p2 = new Point;
+    // Point* p2 = new Point;
+    Point* p2 = new Point(10, 20);
     delete p2;
+
+    Point* p3 = new Point[3] {
+        { 10, 20 },
+        {},
+        { 10, 20 },
+    };
+    delete[] p3;
 }

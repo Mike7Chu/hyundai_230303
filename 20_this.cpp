@@ -2,6 +2,7 @@
 #include <iostream>
 using namespace std;
 
+// this: 멤버 함수를 통해 전달되는 객체의 주소 입니다.
 class Point {
     int x;
     int y;

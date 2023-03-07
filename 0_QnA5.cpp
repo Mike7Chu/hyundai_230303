@@ -59,6 +59,8 @@ int main()
     // 2. 메모리 해지
 }
 #endif
+
+#if 0
 class Sample {
 public:
     Sample() { cout << "Sample()" << endl; }
@@ -71,4 +73,40 @@ int main()
     Sample* p = new Sample[3] {
         { 10 }, {}, { 30 }
     };
+}
+#endif
+
+#include <string>
+
+class User {
+    string name_;
+    int age_;
+    string address_;
+
+public:
+#if 0
+    User()
+        : name_("")
+        , age_(0)
+        , address_("")
+    {
+    }
+#endif
+    User() // - 2
+        : User("", 0, "") // - 3, 위임 생성자(C++11)
+    {
+        // - 5
+    }
+
+    User(const string& name, int age, const string& address) // - 4
+        : name_(name)
+        , age_(age)
+        , address_(address)
+    {
+    }
+};
+
+int main()
+{
+    User user; // User::User() - 1
 }

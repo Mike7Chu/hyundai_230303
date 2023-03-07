@@ -19,6 +19,10 @@ public:
 // 2. reference
 // 3. 멤버 객체가 기본 생성자를 제공하지 않는 경우
 
+// > 객체의 멤버가 초기화되는 순서는
+//   멤버 데이터가 선언된 순서대로 초기화됩니다.
+//   - 초기화리스트도 같은 순서로 작성하는 것이 좋습니다.
+
 class Rect {
     Point leftTop;
     Point rightBottom;

@@ -55,6 +55,7 @@ int main()
 }
 #endif
 
+#if 0
 class Point {
 public:
     Point(const Point& rhs) { }
@@ -65,4 +66,23 @@ public:
 int main()
 {
     // Point pt;
+}
+#endif
+
+class Point {
+public:
+    Point() { }
+    Point(const Point& rhs) { cout << "Point(const Point&)" << endl; }
+};
+
+int main()
+{
+    Point pt1;
+
+    // 복사 생성자
+    Point pt2 = pt1;
+    Point pt3(pt1);
+
+    Point pt4 = { pt1 };
+    Point pt5 { pt1 };
 }

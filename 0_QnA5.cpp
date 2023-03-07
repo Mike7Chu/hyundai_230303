@@ -110,3 +110,7 @@ int main()
 {
     User user; // User::User() - 1
 }
+
+// 추천 도서, 스콧 마이어스
+// - Effective C++, 곽용재 => C++98/03
+// - Effective Modern C++, 류광 => C++11/14

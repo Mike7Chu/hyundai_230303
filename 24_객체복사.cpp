@@ -13,6 +13,13 @@ class User {
     int age;
 
 public:
+    // 컴파일러가 제공하는 복사 생성자 형태
+    User(const User& rhs)
+        : name(rhs.name)
+        , age(rhs.age)
+    {
+    }
+
     User(const char* s, int n)
         : age(n)
     {

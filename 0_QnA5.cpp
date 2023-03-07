@@ -23,6 +23,7 @@ int main()
 //  => 객체를 생성하는 다양한 방법을 제공할 수 있습니다.
 //   Point pt;         ---> Point::Point()
 //   Point pt(10, 20); ---> Point::Point(int, int)
+#if 0
 class Point {
     int x;
     int y;
@@ -56,4 +57,18 @@ int main()
     delete pt2;
     // 1. 할당된 메모리에 대한 소멸자가 호출됩니다.(객체)
     // 2. 메모리 해지
+}
+#endif
+class Sample {
+public:
+    Sample() { cout << "Sample()" << endl; }
+    Sample(int) { cout << "Sample(int)" << endl; }
+};
+
+int main()
+{
+    // Sample* p = new Sample[3];
+    Sample* p = new Sample[3] {
+        { 10 }, {}, { 30 }
+    };
 }

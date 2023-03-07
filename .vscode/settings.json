@@ -62,6 +62,7 @@
     "vector": "cpp",
     "algorithm": "cpp",
     "iomanip": "cpp",
-    "stack.h": "c"
+    "stack.h": "c",
+    "stack": "cpp"
   }
 }

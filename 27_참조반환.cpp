@@ -87,16 +87,19 @@ public:
         name = s;
         return *this;
     }
+
     User& SetAge(int n)
     {
         age = n;
         return *this;
     }
+
     User& SetAddress(const string& s)
     {
         address = s;
         return *this;
     }
+
     User& SetSchool(const string& s)
     {
         school = s;

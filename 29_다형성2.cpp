@@ -7,6 +7,8 @@ class Animal {
 
 public:
     int GetAge() const { return age; }
+
+    void Print() const { cout << age << endl; }
 };
 
 class Dog : public Animal {
@@ -32,6 +34,9 @@ int main()
 {
     Dog d;
     Cat c;
+
+    c.Print();
+    d.Print();
 
     PrintAge(d);
     PrintAge(c);

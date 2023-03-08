@@ -11,13 +11,32 @@ public:
     // void Set(Point* this, int a, int b)
     void Set(int a, int b)
     {
-        this->x = a;
-        this->y = b;
+        x = a;
+        // this->x = a;
+        y = b;
+        // this->y = b;
+    }
+
+    void Set2(int x, int y)
+    {
     }
 };
 
+int n = 100;
+int g_n = 100;
+
+void foo()
+{
+    int n = 42; // Shadowing
+
+    cout << ::n << endl;
+    // C++에서 전역 공간을 명시적으로 접근하는 방법.
+}
+
 int main()
 {
+    foo();
+
     Point p1;
     Point p2;
 

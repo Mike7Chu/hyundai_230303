@@ -15,6 +15,7 @@ using namespace std;
 //    필요합니다.
 //   "부모 클래스의 소멸자는 반드시 가상으로 만들어야 합니다."
 
+// 4. 부모의 소멸자가 가상이면, 자식의 소멸자도 가상입니다.
 class Animal {
 public:
     Animal() { cout << "Animal()" << endl; }
@@ -24,7 +25,9 @@ public:
 class Dog : public Animal {
 public:
     Dog() { cout << "Dog()" << endl; }
-    ~Dog() { cout << "~Dog()" << endl; }
+    ~Dog() override { cout << "~Dog()" << endl; }
+    // 컴파일 오류 - 부모의 소멸자가 가상함수가 아니기 때문에
+    //            발생합니다.
 };
 
 int main()

@@ -69,6 +69,7 @@ int main()
 }
 #endif
 
+#if 0
 class Point {
 public:
     Point() { }
@@ -86,3 +87,4 @@ int main()
     Point pt4 = { pt1 };
     Point pt5 { pt1 };
 }
+#endif

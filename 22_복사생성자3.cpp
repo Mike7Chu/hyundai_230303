@@ -18,10 +18,10 @@ public:
 //   - msvc 2022
 Sample foo()
 {
-    // Sample s;
-    // return s;
+    Sample s;
+    return s;
 
-    return Sample(); // 임시 객체 생성 문법
+    // return Sample(); // 임시 객체 생성 문법
 }
 
 int main()

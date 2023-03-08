@@ -27,3 +27,14 @@ int main()
     cout << sizeof(Animal) << endl;
     cout << sizeof(Dog) << endl;
 }
+
+// UNIX
+// : VFS(Virtual File System)
+// => 모든 것은 다 파일이다.
+// => 파일의 인터페이스를 통해 모든 장치를 제어할 수 있습니다.
+
+//  파일
+//   read   ---> 일반 파일: 파일의 내용을 읽습니다.
+//               소켓 파일: 네트워크로부터 패킷을 읽습니다.
+//               장치 파일: 장치의 상태를 읽습니다.
+//                ....

@@ -19,11 +19,24 @@ class Rect {
     Point rightBottom;
 
 public:
-    Rect() { cout << "Rect()" << endl; }
-    ~Rect() { cout << "~Rect()" << endl; }
+    Rect()
+    // : leftTop(), rightBottom() <- 컴파일러가 처리해줍니다. - 2
+    {
+        cout << "Rect()" << endl; // - 3
+    }
+
+    ~Rect()
+    {
+        cout << "~Rect()" << endl; // - <2>
+
+        // 멤버 객체에 대한 소멸자 호출을 컴파일러가 자동으로 삽입합니다.
+        // rightBottom.~Point();
+        // leftTop.~Point();
+    }
 };
 
 int main()
 {
-    Rect r;
+    Rect r; // Rect::Rect(); - 1
 }
+// Rect::~Rect()  - <1>

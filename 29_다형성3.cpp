@@ -8,11 +8,15 @@ class Animal { };
 class Dog : public Animal { };
 class Cat : public Animal { };
 
+class Rabbit : public Animal { };
+
 int main()
 {
     vector<Animal*> v;
     v.push_back(new Dog);
     v.push_back(new Cat);
+
+    v.push_back(new Rabbit);
 }
 
 #if 0

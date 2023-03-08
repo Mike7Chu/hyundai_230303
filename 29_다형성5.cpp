@@ -26,8 +26,11 @@ public:
 
 class Dog : public Animal {
 public:
-    void Hello() override { }
+    // virtual void Hello() { }  - X
+    // virtual void Hello() override { } // 1
+    void Hello() override { } // 2
 
+    // void Hello() override { }
     // virtual void Hel1o() override { }
 
     virtual void Go() const { cout << "Dog go" << endl; }

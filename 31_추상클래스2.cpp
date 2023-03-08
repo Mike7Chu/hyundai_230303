@@ -10,11 +10,23 @@ public:
     void StopRecording() { cout << "Stop Recording" << endl; }
 };
 
+class FHDCamera {
+public:
+    void StartRecording() { cout << "Start Recording" << endl; }
+    void StopRecording() { cout << "Stop Recording" << endl; }
+};
+
+class UHDCamera {
+public:
+    void StartRecording() { cout << "Start Recording" << endl; }
+    void StopRecording() { cout << "Stop Recording" << endl; }
+};
+
 class Car {
-    Camera* camera;
+    UHDCamera* camera;
 
 public:
-    Car(Camera* p)
+    Car(UHDCamera* p)
         : camera(p)
     {
     }
@@ -29,7 +41,7 @@ public:
 
 int main()
 {
-    Camera cam;
+    UHDCamera cam;
     Car car(&cam);
 
     car.Go();

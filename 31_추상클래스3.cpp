@@ -8,6 +8,9 @@ using namespace std;
 
 // 2. 해결 방법
 //    느슨한 결합 / 약한 결합
+//    DIP(Dependency Inversion Principle, 의존 관계 역전 원칙)
+//     : 클래스는 구체적인 타입에 의존하는 것이 아니라,
+//      추상 클래스나 인터페이스에 의존해야 한다.
 
 //                    <<interface>>
 //   Car -------------> BlackBox
@@ -93,3 +96,12 @@ int main()
 
     car.Go();
 }
+
+// 객체 지향 5대 원칙(SOLID) => 로버트 C 마틴(클린 코드)
+// 1. SRP(단일 책임 원칙)
+// 2. OCP(개방 폐쇄 원칙)
+// 3. LSP(리스코프 대체 원칙)
+// 4. ISP(Interface Segregation Principle, 인터페이스 분리 원칙)
+//   > 범용 인터페이스 아니라 세분화된 인터페이스가 좋다.
+
+// 5. DIP(의존관계 역전 원칙)

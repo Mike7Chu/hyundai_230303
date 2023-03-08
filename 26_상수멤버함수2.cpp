@@ -4,7 +4,7 @@ using namespace std;
 
 // 1. 비상수 멤버 함수와 상수 멤버 함수를 동시에 제공할 수 있습니다.
 // 2. 상수 멤버 함수만 제공할 경우
-//    Sample s;         ---> X
+//    Sample s;         ---> 상수 멤버 함수
 //    const Sample s;   ---> 상수 멤버 함수
 //    const Sample& s;  ---> 상수 멤버 함수
 

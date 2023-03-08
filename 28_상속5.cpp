@@ -21,6 +21,23 @@ class Dog : public Animal {
     int color;
 
 public:
+    Dog(int a, int c)
+        : Animal(a)
+        , color(c)
+    {
+    }
+};
+
+int main()
+{
+    Dog d(100, 42);
+}
+
+#if 0
+class Dog : public Animal {
+    int color;
+
+public:
     // Dog() : Animal() {}
     Dog()
         : Animal(42) // Animal::Animal(int)
@@ -33,3 +50,4 @@ int main()
 {
     Dog d;
 }
+#endif

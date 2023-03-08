@@ -33,7 +33,7 @@ public:
     }
 };
 
-#if 0
+#if 1
 class Rect {
     Point leftTop;
 
@@ -60,6 +60,7 @@ int main()
 }
 #endif
 
+#if 0
 class Rect {
     Point leftTop;
 
@@ -74,6 +75,7 @@ public:
 int main()
 {
 }
+#endif
 
 #if 0
 int main()

@@ -3,10 +3,16 @@
 #include <string>
 using namespace std;
 
+// 추상화
+
 // 1. private 외부에서 접근이 불가능합니다.
 // > 자신의 멤버 함수를 통해서만 접근이 가능합니다.
+//  - friend 선언된 함수와 클래스는 접근이 가능합니다.
 
 // 2. public은 외부에서 접근이 가능합니다.
+//  struct: public
+//   class: private
+
 // 3. friend로 선언된 함수와 클래스는 자신의 private 멤버에 접근할 수
 //    있습니다.
 
@@ -23,8 +29,13 @@ public:
         age = n;
     }
 
-    // string GetName() { return name; }
-    // int GetAge() { return age; }
+    // Setter
+    // void SetName(const string& n) { name = n; }
+    // void SetAge(int a) { age = a; }
+
+    // Getter
+    // string GetName() const { return name; }
+    // int GetAge() const { return age; }
 
     friend void PrintUser(User user);
     friend class UserPrinter;

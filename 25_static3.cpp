@@ -29,6 +29,13 @@ public:
         // data = 10;
     }
 
+    static void hoo(Sample* self)
+    {
+        self->goo(); // this->goo()
+        self->data = 10; // this->data = 10;
+    }
+
+    // void goo(Sample* this)
     void goo() // 멤버 함수
     {
         goo(); // this->goo();
@@ -40,4 +47,6 @@ int Sample::n = 0;
 
 int main()
 {
+    Sample s;
+    Sample::hoo(&s); // !!!
 }

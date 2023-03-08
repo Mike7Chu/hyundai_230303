@@ -43,4 +43,6 @@ int main()
     Car cars[5];
 
     cout << Car::cnt << endl;
+
+    cout << cars[0].cnt << endl;
 }

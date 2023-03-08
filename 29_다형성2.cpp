@@ -18,15 +18,23 @@ class Cat : public Animal {
 // 1. 동종을 처리하는 함수를 정의할 수 있습니다.
 // : Animal을 상속 받는 모든 자식 클래스의 객체는 해당 기능을
 //   이용할 수 있습니다.
-void PrintAge(Animal* p)
+void PrintAge(const Animal* p)
 {
     cout << p->GetAge() << endl;
+}
+
+void PrintAge(const Animal& r)
+{
+    cout << r.GetAge() << endl;
 }
 
 int main()
 {
     Dog d;
     Cat c;
+
+    PrintAge(d);
+    PrintAge(c);
 
     PrintAge(&d);
     PrintAge(&c);

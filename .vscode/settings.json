@@ -63,6 +63,8 @@
     "algorithm": "cpp",
     "iomanip": "cpp",
     "stack.h": "c",
-    "stack": "cpp"
+    "stack": "cpp",
+    "list": "cpp",
+    "deque": "cpp"
   }
 }

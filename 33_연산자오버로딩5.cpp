@@ -65,11 +65,25 @@ public:
         , age(n)
     {
     }
+
+    friend istream& operator>>(istream& is, User& user);
+    friend ostream& operator<<(ostream& os, const User& user);
 };
+
+istream& operator>>(istream& is, User& user)
+{
+    return is >> user.name >> user.age;
+}
+
+ostream& operator<<(ostream& os, const User& user)
+{
+    return os << user.name << ", " << user.age;
+}
 
 int main()
 {
     User user("Tom", 42);
     cin >> user;
+
     cout << user << endl;
 }

@@ -20,6 +20,7 @@ public:
 
     // 멤버 함수
     //  : pt1.Add(pt2)
+    // Point Add(Point* this, const Point& rhs)
     Point Add(const Point& rhs)
     {
         return Point(x + rhs.x, y + rhs.y);

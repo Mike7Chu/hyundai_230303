@@ -1,7 +1,9 @@
 // 33_연산자오버로딩5.cpp
 #include <iostream>
+#include <string>
 using namespace std;
 
+#if 0
 class Point {
     int x;
     int y;
@@ -50,4 +52,24 @@ int main()
     // ostream& operator<<(cout, pt);
 
     cout << endl;
+}
+#endif
+
+class User {
+    string name;
+    int age;
+
+public:
+    User(const string& s, int n)
+        : name(s)
+        , age(n)
+    {
+    }
+};
+
+int main()
+{
+    User user("Tom", 42);
+    cin >> user;
+    cout << user << endl;
 }

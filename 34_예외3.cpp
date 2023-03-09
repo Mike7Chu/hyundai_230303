@@ -11,6 +11,8 @@ using namespace std;
 
 // 2. std::exception의 하위 클래스로 예외 타입을 정의할 수
 //    있습니다.
+// - noexcept: 함수가 예외가 없음을 알립니다.
+
 class InvalidFilenameException : public exception {
 public:
     const char* what() const noexcept override

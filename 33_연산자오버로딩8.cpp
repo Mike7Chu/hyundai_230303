@@ -18,20 +18,20 @@ class Ptr {
     Image* obj;
 
 public:
-    Ptr(Image* p = nullptr)
+    inline Ptr(Image* p = nullptr)
         : obj(p)
     {
     }
 
     // nullptr은 delete로 전달되면 아무일도 일어나지 않습니다.
-    ~Ptr()
+    inline ~Ptr()
     {
         delete obj;
     }
 
     // 멤버 함수를 통해서만 제공되어야 하는 연산자 오버로딩입니다.
-    Image& operator*() { return *obj; }
-    Image* operator->() { return obj; }
+    inline Image& operator*() { return *obj; }
+    inline Image* operator->() { return obj; }
 };
 int main()
 {

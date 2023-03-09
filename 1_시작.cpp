@@ -68,6 +68,9 @@ int main()
 #endif
 
 // 1) std::cout, std::cin, std::endl 정체는 무엇인가?
+//  std::cout -> std::ostream의 전역 객체
+//  std::cin  -> std::istream의 전역 객체
+//  => 연산자 오버로딩을 통해 입출력을 처리할 수 있습니다.
 
 // 2) 서식을 지정하지 않아도, 타입에 따라 원하는 형태로 입출력 됩니다.
 //    원리는 무엇인가?

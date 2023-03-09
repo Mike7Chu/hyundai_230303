@@ -5,8 +5,27 @@ using namespace std;
 // 오류 코드를 전달할 경우, 오류의 원인을 파악하기 어렵습니다.
 // > C++은 오류의 종류에 따라서 사용자 정의 타입을 제공합니다.
 
-class InvalidFilenameException { };
-class OutOfMemoryException { };
+// 1. 사용자 정의 타입
+// class InvalidFilenameException { };
+// class OutOfMemoryException { };
+
+// 2. std::exception의 하위 클래스로 예외 타입을 정의할 수
+//    있습니다.
+class InvalidFilenameException : public exception {
+public:
+    const char* what() const noexcept override
+    {
+        return "Invalid Filename";
+    }
+};
+
+class OutOfMemoryException : public exception {
+public:
+    const char* what() const noexcept override
+    {
+        return "Out of Memory";
+    }
+};
 
 int foo(int value)
 {
@@ -22,7 +41,15 @@ int foo(int value)
 int main()
 {
     try {
-        foo(1);
+        foo(0);
+    } catch (InvalidFilenameException& error) {
+        cout << error.what() << endl;
+    } catch (OutOfMemoryException& error) {
+        cout << error.what() << endl;
+    }
+
+    try {
+        foo(0);
     } catch (InvalidFilenameException& error) {
         cout << "Invalid Filename" << endl;
     } catch (OutOfMemoryException& error) {

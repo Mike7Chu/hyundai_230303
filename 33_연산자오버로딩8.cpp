@@ -29,6 +29,7 @@ public:
         delete obj;
     }
 
+    // 멤버 함수를 통해서만 제공되어야 하는 연산자 오버로딩입니다.
     Image& operator*() { return *obj; }
     Image* operator->() { return obj; }
 };

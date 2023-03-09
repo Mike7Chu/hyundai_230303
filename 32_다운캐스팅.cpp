@@ -42,4 +42,14 @@ int main()
     } else {
         cout << "Dog 타입이 아닙니다." << endl;
     }
+
+    // dynamic_cast
+    // : 런타임에 타입을 조사해서, 캐스팅이 불가능하면
+    //   nullptr 을 반환합니다.
+    Dog* pDog = dynamic_cast<Dog*>(p);
+    if (pDog) {
+        cout << pDog->GetAge() << endl;
+    } else {
+        cout << "Dog 타입이 아닙니다." << endl;
+    }
 }

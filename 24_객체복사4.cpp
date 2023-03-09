@@ -13,9 +13,11 @@ class User {
 
     // C++98, private 영역에 선언만 한다. 링크 오류!
     // User(const User& rhs);
+    // User& operator=(const User& rhs);
 
 public:
     User(const User& rhs) = delete; // 복사 금지, C++11
+    User& operator=(const User& rhs) = delete;
 
     User(const char* s, int n)
         : age(n)

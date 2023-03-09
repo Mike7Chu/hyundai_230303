@@ -57,10 +57,26 @@ public:
     TYPE* operator->() { return obj; }
 };
 
+// C++ 표준 라이브러리에 스마트 포인터가 도입되었습니다.
+// 1. unique_ptr
+//   : 복사 금지
+
+// 2. shared_ptr
+//   : 참조 계수 기반
+
 int main()
 {
+    shared_ptr<Image> p1(new Image);
+    shared_ptr<Image> p2 = p1; /* 허용, 참조 계수 증가 */
+
+    unique_ptr<Image> x1(new Image);
+    // unique_ptr<Image> x2 = x1; /* 허용 X */
+
+    // shared_ptr<Image> p(new Image);
+    unique_ptr<Image> p(new Image);
+
     // Ptr<Image> p = new Image;
-    Ptr<Image> p(new Image);
+    // Ptr<Image> p(new Image);
 
     p->Draw();
     // (p.operator->())Draw()

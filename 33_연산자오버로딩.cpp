@@ -40,8 +40,8 @@ int main()
     Point pt2(20, 30);
 
     // 1. 멤버 함수
-    // Point result1 = pt1.Add(pt2); // Point::Add(&pt1, pt2);
-    // result1.Print();
+    Point result1 = pt1.Add(pt2); // Point::Add(&pt1, pt2);
+    result1.Print();
 
     // 2. 일반 함수
     Point result2 = Add(pt1, pt2);

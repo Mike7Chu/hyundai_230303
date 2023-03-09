@@ -32,7 +32,7 @@ ostream& endl(ostream& os)
 
 }
 
-using namespace xstd;
+using namespace std;
 
 // 1. endl의 정체는 함수입니다.
 // 2. ostream은
@@ -41,8 +41,22 @@ using namespace xstd;
 //    - endl(cout)  사용하는 것이 아니라,
 //      cout << endl 형태로 사용할 수 있습니다.
 
+// 3. endl, IO 조정자(조작자, Manipulator)
+//    위의 형태로 다양한 함수를 제공해서 사용할 수 있습니다.
+//    "확장성"
+
+ostream& menu(ostream& os)
+{
+    os << "1. 이자카야" << endl;
+    os << "2. 오마카세" << endl;
+    os << "3. 곱창" << endl;
+    return os;
+}
+
 int main()
 {
+    cout << menu << menu << menu;
+
     int n = 42;
     cout << n;
     // cout.operator<<(int)

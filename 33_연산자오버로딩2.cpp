@@ -23,10 +23,10 @@ public:
         return Point(x + rhs.x, y + rhs.y);
     }
 
-    friend Point operator+(const Point& lhs, const Point& rhs)
-    {
-        return Point(lhs.x + rhs.x, lhs.y + rhs.y);
-    }
+    // friend Point operator+(const Point& lhs, const Point& rhs)
+    // {
+    //     return Point(lhs.x + rhs.x, lhs.y + rhs.y);
+    // }
 };
 
 // 연산자 오버로딩

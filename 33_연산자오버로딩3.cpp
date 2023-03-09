@@ -2,6 +2,10 @@
 #include <iostream>
 #include <cstdio>
 
+// 1. cout은 ostream 타입의 객체 입니다.
+// 2. 연산자 오버로딩(operator<<)을 통해 제공되는 멤버 함수를 통해 출력합니다.
+// 3. 자기 자신의 참조를 반환해서, 연쇄적으로 멤버 함수를 호출할 수 있습니다.
+
 namespace xstd {
 class ostream {
 public:

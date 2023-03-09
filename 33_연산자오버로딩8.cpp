@@ -14,6 +14,7 @@ public:
 //  => 스마트 포인터(Smart Pointer)
 //   핵심: 포인터 객체가 사라질 때, 가지고 자원을
 //        소멸자를 통해 delete 합니다.
+#if 0
 class Ptr {
     Image* obj;
 
@@ -31,11 +32,36 @@ public:
 
     // 멤버 함수를 통해서만 제공되어야 하는 연산자 오버로딩입니다.
     inline Image& operator*() { return *obj; }
-    inline Image* operator->() { return obj; }
+    Image* operator->() { return obj; }
 };
+#endif
+
+template <typename TYPE>
+class Ptr {
+    TYPE* obj;
+
+public:
+    inline Ptr(TYPE* p = nullptr)
+        : obj(p)
+    {
+    }
+
+    // nullptr은 delete로 전달되면 아무일도 일어나지 않습니다.
+    inline ~Ptr()
+    {
+        delete obj;
+    }
+
+    // 멤버 함수를 통해서만 제공되어야 하는 연산자 오버로딩입니다.
+    inline TYPE& operator*() { return *obj; }
+    TYPE* operator->() { return obj; }
+};
+
 int main()
 {
-    Ptr p = new Image;
+    // Ptr<Image> p = new Image;
+    Ptr<Image> p(new Image);
+
     p->Draw();
     // (p.operator->())Draw()
     // => (p.operator->())->Draw()

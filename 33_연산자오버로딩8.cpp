@@ -28,10 +28,20 @@ public:
     {
         delete obj;
     }
+
+    Image& operator*() { return *obj; }
+    Image* operator->() { return obj; }
 };
 int main()
 {
     Ptr p = new Image;
+    p->Draw();
+    // (p.operator->())Draw()
+    // => (p.operator->())->Draw()
+
+    (*p).Draw();
+    // (p.operator*()).Draw()
+    // (Image&).Draw()
 }
 
 #if 0

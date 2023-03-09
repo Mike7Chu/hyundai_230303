@@ -35,7 +35,8 @@ int main()
     Animal* p = new Dog;
 
     delete p;
-    // Animal::~Animal()
+    // 정적 바인딩: Animal::~Animal()
+    // 동적 바인딩: Dog::~Dog()
 
     // Dog d;
 }

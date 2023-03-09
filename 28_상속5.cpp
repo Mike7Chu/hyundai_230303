@@ -22,7 +22,7 @@ class Dog : public Animal {
 
 public:
     Dog(int a, int c)
-        : Animal(a)
+        : Animal(a) // 부모의 생성자를 호출하는 방법.
         , color(c)
     {
     }

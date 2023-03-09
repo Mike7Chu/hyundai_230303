@@ -56,4 +56,4 @@ int main()
 }
 
 // 4. dynamic_cast
-//  => Coming Soon
+//  => 다운 캐스트

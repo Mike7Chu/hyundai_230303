@@ -55,9 +55,9 @@ int main()
 // C++ 표준 입출력 라이브러리가 있습니다.
 #include <iostream>
 // Input Output Stream
-//  표준 입력: cin
-//  표준 출력: cout
-//  표준 에러: cerr
+//  표준 입력 객체: std::cin
+//  표준 출력 객체: std::cout
+//  표준 에러 객체: std::cerr
 
 #if 0
 int main()
@@ -75,6 +75,7 @@ int main()
 
 // 3) 주소를 보내지 않아도, 변수의 값이 변경됩니다.
 //    원리는 무엇인가?
+// => 레퍼런스
 
 int main()
 {

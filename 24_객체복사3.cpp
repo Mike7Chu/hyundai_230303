@@ -12,6 +12,14 @@ class User {
 
     int* ref;
 
+    void Release()
+    {
+        if (--(*ref) == 0) {
+            delete[] name;
+            delete ref;
+        }
+    }
+
 public:
     User(const char* s, int n)
         : age(n)
@@ -20,6 +28,25 @@ public:
         strcpy(name, s);
 
         ref = new int(1);
+    }
+
+    User& operator=(const User& rhs)
+    {
+        // 1. 자신과 동일한 타입인지 체크합니다.
+        if (this == &rhs)
+            return *this;
+
+        // 2. 참조 계수를 감소하고, 0인 경우 자원을 해지합니다.
+        Release();
+
+        // 3. 복사, 참조 계수 증가!
+        name = rhs.name;
+        age = rhs.age;
+        ref = rhs.ref;
+
+        ++(*ref); // !!!!!!!
+
+        return *this;
     }
 
     User(const User& rhs)
@@ -33,10 +60,11 @@ public:
 
     ~User()
     {
-        if (--(*ref) == 0) {
-            delete[] name;
-            delete ref;
-        }
+        Release();
+        // if (--(*ref) == 0) {
+        //     delete[] name;
+        //     delete ref;
+        // }
     }
 
     void Print()

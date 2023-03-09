@@ -20,7 +20,7 @@ public:
     }
 
     // i++
-    inline Integer operator++(int)
+    inline Integer operator++(int) // 더미
     {
         Integer temp(*this); // 현재의 상태를 복사 생성 합니다.
         ++value;
